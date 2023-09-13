@@ -1,0 +1,77 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2023-09-13T13:18:30.490Z",
+        "line": 7,
+        "name": "chat_users tablosundaki create_staff_id\u003d1 olan kullanıcı sayısı testi",
+        "description": "",
+        "id": "query01;chat-users-tablosundaki-create-staff-id\u003d1-olan-kullanıcı-sayısı-testi",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1026329500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Database baglantisi kurulur.",
+            "match": {
+              "location": "stepDefinitions.DBstepDefinition.database_baglantisi_kurulur()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 138998400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Query hazirlanir ve calistirilir.",
+            "match": {
+              "location": "stepDefinitions.DBstepDefinition.query_hazirlanir_ve_calistirilir()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 2998200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Query sonuclari dogrulanir.",
+            "match": {
+              "location": "stepDefinitions.DBstepDefinition.query_sonuclari_dogrulanir()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 7990600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Database baglantisi kapatilir.",
+            "match": {
+              "location": "stepDefinitions.DBstepDefinition.database_baglantisi_kapatilir()"
+            },
+            "keyword": "* "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@query01"
+          }
+        ]
+      }
+    ],
+    "name": "Query01",
+    "description": "",
+    "id": "query01",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/JDBC_Query01.feature",
+    "tags": []
+  }
+]
