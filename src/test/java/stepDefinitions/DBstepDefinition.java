@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import com.sun.source.tree.WhileLoopTree;
 import io.cucumber.java.en.Given;
+import org.junit.Assert;
 import utilities.ConfigReader;
 import utilities.DB_Utils;
 import utilities.JDBCReusableMethods;
@@ -12,6 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 
 public class DBstepDefinition {
@@ -71,7 +73,7 @@ public class DBstepDefinition {
     @Given("class_sections tablosu testi sonuclari dogrulanir.")
     public void class_sections_tablosu_testi_sonuclari_dogrulanir() throws SQLException {
 
-        while (resultSet.next()){
+        while (resultSet.next()) {
             System.out.println(resultSet.getInt(1));
         }
     }
@@ -79,11 +81,10 @@ public class DBstepDefinition {
     //---------------------------Query03-----------------------
 
 
-
     @Given("students tablosu icin query hazirlanir.")
     public void students_tablosu_icin_query_hazirlanir() throws SQLException {
 
-       // String query = "SELECT mother_name, mother_occupation FROM wonderworld_qa2.students WHERE lastname LIKE 'T%'";
+        // String query = "SELECT mother_name, mother_occupation FROM wonderworld_qa2.students WHERE lastname LIKE 'T%'";
 
         String sql = queryManage.getQuery03();
         resultSet = statement.executeQuery(sql);
@@ -91,25 +92,54 @@ public class DBstepDefinition {
     }
 
 
-
     @Given("Studens tablosundan donen sonuclari listeleyiniz.")
     public void studens_tablosundan_donen_sonuclari_listeleyiniz() throws SQLException {
 
         while (resultSet.next()) {
 
-            System.out.println("mother_name:   "+resultSet.getString(1) + "     " +
-                               "mother_occopation:    " + resultSet.getString(2) );
+            System.out.println("mother_name:   " + resultSet.getString(1) + "     " +
+                    "mother_occopation:    " + resultSet.getString(2));
 
         }
 
 
+    }
+
+    //---------------------------Query04-----------------------
+
+    @Given("Update query'si hazirlanip calistirilir.")
+    public void update_query_si_hazirlanip_calistirilir() {
+
+        String updateQuery = ConfigReader.getProperty("query04");
+        String updateName = ConfigReader.getProperty("updateName");
+        String updateID = ConfigReader.getProperty("updateID");
+
+        DB_Utils.updatePrepared(updateQuery, updateName, updateID);
 
     }
 
+    //---------------------------Query05-----------------------
 
+    @Given("Kayit ekleme query'si hazirlanir ve calistirilir.")
+    public void kayit_ekleme_query_si_hazirlanir_ve_calistirilir() throws SQLException {
 
+        String addQuery = ConfigReader.getProperty("query05");
 
+        int rowAffected = statement.executeUpdate(addQuery);
 
+        assertTrue(rowAffected>0);
 
+    }
 
+    //---------------------------Query06-----------------------
+
+    @Given("Delete query'si hazirlanir ve calistirilir.")
+    public void delete_query_si_hazirlanir_ve_calistirilir() throws SQLException {
+
+        String deleteQuery = ConfigReader.getProperty("query06");
+        int deleteRowCount = statement.executeUpdate(deleteQuery);
+
+        assertTrue(deleteRowCount>0);
+
+    }
 }

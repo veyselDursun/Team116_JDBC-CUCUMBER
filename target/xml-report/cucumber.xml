@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="1.718">
-    <testcase classname="Query03" name="students tablosundaki lastname bilgisi 'T' ile başlayan öğrenci verileri testi" time="1.391">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="1.311">
+    <testcase classname="Query06" name="visitors_book tablosundan istenen bir veri silinebilme testi" time="1.015">
         <system-out><![CDATA[* Database baglantisi kurulur...............................................passed
-* students tablosu icin query hazirlanir....................................passed
-* Studens tablosundan donen sonuclari listeleyiniz..........................passed
+* Delete query'si hazirlanir ve calistirilir................................passed
 * Database baglantisi kapatilir.............................................passed
 ]]></system-out>
     </testcase>

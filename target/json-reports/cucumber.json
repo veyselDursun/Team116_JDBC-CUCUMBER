@@ -1,22 +1,22 @@
 [
   {
-    "line": 5,
+    "line": 3,
     "elements": [
       {
-        "start_timestamp": "2023-09-14T08:49:03.683Z",
-        "line": 8,
-        "name": "students tablosundaki lastname bilgisi \u0027T\u0027 ile başlayan öğrenci verileri testi",
+        "start_timestamp": "2023-09-14T11:25:27.282Z",
+        "line": 5,
+        "name": "visitors_book tablosundan istenen bir veri silinebilme testi",
         "description": "",
-        "id": "query03;students-tablosundaki-lastname-bilgisi--t--ile-başlayan-öğrenci-verileri-testi",
+        "id": "query06;visitors-book-tablosundan-istenen-bir-veri-silinebilme-testi",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1128001800,
+              "duration": 784996200,
               "status": "passed"
             },
-            "line": 10,
+            "line": 7,
             "name": "Database baglantisi kurulur.",
             "match": {
               "location": "stepDefinitions.DBstepDefinition.database_baglantisi_kurulur()"
@@ -25,34 +25,22 @@
           },
           {
             "result": {
-              "duration": 141000400,
+              "duration": 125010900,
               "status": "passed"
             },
-            "line": 11,
-            "name": "students tablosu icin query hazirlanir.",
+            "line": 8,
+            "name": "Delete query\u0027si hazirlanir ve calistirilir.",
             "match": {
-              "location": "stepDefinitions.DBstepDefinition.students_tablosu_icin_query_hazirlanir()"
+              "location": "stepDefinitions.DBstepDefinition.delete_query_si_hazirlanir_ve_calistirilir()"
             },
             "keyword": "* "
           },
           {
             "result": {
-              "duration": 8012100,
+              "duration": 8000800,
               "status": "passed"
             },
-            "line": 12,
-            "name": "Studens tablosundan donen sonuclari listeleyiniz.",
-            "match": {
-              "location": "stepDefinitions.DBstepDefinition.studens_tablosundan_donen_sonuclari_listeleyiniz()"
-            },
-            "keyword": "* "
-          },
-          {
-            "result": {
-              "duration": 6999800,
-              "status": "passed"
-            },
-            "line": 13,
+            "line": 9,
             "name": "Database baglantisi kapatilir.",
             "match": {
               "location": "stepDefinitions.DBstepDefinition.database_baglantisi_kapatilir()"
@@ -62,16 +50,16 @@
         ],
         "tags": [
           {
-            "name": "@query03"
+            "name": "@query06"
           }
         ]
       }
     ],
-    "name": "Query03",
+    "name": "Query06",
     "description": "",
-    "id": "query03",
+    "id": "query06",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/JDBC_Query03.feature",
+    "uri": "file:src/test/resources/JDBC_Query06.feature",
     "tags": []
   }
 ]

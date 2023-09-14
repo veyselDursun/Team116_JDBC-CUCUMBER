@@ -16,7 +16,18 @@
       <console name="wonderworld_T116" type="STANDARD" schema="wonderworld_qa2" session="Main"><![CDATA[SELECT COUNT(*) FROM wonderworld_qa2.chat_users WHERE create_staff_id = 1;
 select * from wonderworld_qa2.chat_users;
 
-SELECT mother_name, mother_occupation FROM wonderworld_qa2.students WHERE lastname LIKE 'T%';]]></console>
+SELECT mother_name, mother_occupation FROM wonderworld_qa2.students WHERE lastname LIKE 'T%';
+
+select * from wonderworld_qa2.topic;
+
+UPDATE wonderworld_qa2.topic SET name = 'Sophie' WHERE id = 13;
+
+SELECT * from wonderworld_qa2.transport_route;
+
+insert into wonderworld_qa2.transport_route( id,route_title,is_active) 
+                                     values (12, t116, 'Kariyer Yolu', yes);
+                                     
+DELETE FROM wonderworld_qa2.visitors_book WHERE id=5;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -26,6 +37,8 @@ SELECT mother_name, mother_occupation FROM wonderworld_qa2.students WHERE lastna
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="a8e04305-4d6d-4767-a0d9-82be824c8534" dataset="wonderworld_qa2.books" active-filter-id="" />
+    <filter-actions connection-id="a8e04305-4d6d-4767-a0d9-82be824c8534" dataset="wonderworld_qa2.transport_route" active-filter-id="" />
     <filter-actions connection-id="a8e04305-4d6d-4767-a0d9-82be824c8534" dataset="wonderworld_qa2.students" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
