@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="1.556">
-    <testcase classname="Query01" name="chat_users tablosundaki create_staff_id=1 olan kullanıcı sayısı testi" time="1.28">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="1.718">
+    <testcase classname="Query03" name="students tablosundaki lastname bilgisi 'T' ile başlayan öğrenci verileri testi" time="1.391">
         <system-out><![CDATA[* Database baglantisi kurulur...............................................passed
-* Query hazirlanir ve calistirilir..........................................passed
-* Query sonuclari dogrulanir................................................passed
+* students tablosu icin query hazirlanir....................................passed
+* Studens tablosundan donen sonuclari listeleyiniz..........................passed
 * Database baglantisi kapatilir.............................................passed
 ]]></system-out>
     </testcase>
